@@ -1,0 +1,19 @@
+<form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+    <label for="patient_name">Patient Name</label>
+    <input id="patient_name" formControlName="patient_name" type="text" />
+
+    <label for="provider_name">Provider Name</label>
+    <input id="provider_name" formControlName="provider_name" type="text" />
+
+    <label for="appointment_date">Date</label>
+    <input id="appointment_date" formControlName="appointment_date" type="date" />
+
+    <label for="appointment_time">Time</label>
+    <input id="appointment_time" formControlName="appointment_time" type="time" />
+
+    <label for="reason">Reason</label>
+    <textarea id="reason" formControlName="reason"></textarea>
+
+    <button type="submit" [disabled]="!appointmentForm.valid">Book Appointment</button>
+</form>
+
